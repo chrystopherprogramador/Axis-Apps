@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.keystore
+*.jks
+*.pfx
+*.pem
+.env
+*.db
+appsettings.json
+!appsettings.example.json
+

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>WinExe</OutputType>
+	<TargetFramework>net9.0-windows</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<UseWindowsForms>true</UseWindowsForms>
+	<RootNamespace>Axis.App.RfidStation</RootNamespace>
+	<AssemblyName>axis-rfid-station</AssemblyName>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+	<RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+	<PublishSingleFile Condition="'$(PublishProfile)' != ''">true</PublishSingleFile>
+	<SelfContained Condition="'$(PublishProfile)' != ''">true</SelfContained>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Npgsql" Version="9.0.2" />
+	<PackageReference Include="Dapper" Version="2.1.35" />
+	<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Update="appsettings.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+
+</Project>

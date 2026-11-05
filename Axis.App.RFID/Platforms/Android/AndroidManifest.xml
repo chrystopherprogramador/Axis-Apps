@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+	<uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<!-- Necessario para comunicar com servicos RFID UROVO (Android 12+) -->
+	<queries>
+		<package android:name="com.ubx.usdk.rfid" />
+		<package android:name="com.ubx.rfidwedge" />
+		<package android:name="com.ubx.rfid" />
+		<package android:name="com.ubx.datawedge" />
+		<package android:name="com.ubx.uscanner" />
+		<package android:name="com.ubx.usdk.profile" />
+		<intent>
+			<action android:name="com.ubx.usdk.rfid.RfidService" />
+		</intent>
+		<intent>
+			<action android:name="com.ubx.rfid.action.RFID_DATA" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.DECODE_DATA" />
+		</intent>
+		<intent>
+			<action android:name="com.ubx.datawedge.SCANNER_DECODE_EVENT" />
+		</intent>
+	</queries>
+</manifest>

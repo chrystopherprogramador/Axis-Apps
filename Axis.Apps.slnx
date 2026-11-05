@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Axis.App.RFID/Axis.App.RFID.csproj" />
+  <Project Path="Axis.App.RfidStation/Axis.App.RfidStation.csproj" />
+  <Project Path="Axis.App.Salao/Axis.App.Salao.csproj" />
+  <Project Path="Axis.App.Vendedor/Axis.App.Vendedor.csproj" />
+</Solution>
